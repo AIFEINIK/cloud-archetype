@@ -1,0 +1,127 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="${version}" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="${package}.dao.mapper.SysDictTypeMapper">
+
+    <sql id="searchAllColumns">
+        select dict_id, dict_name, dict_type, status, create_by, create_time, update_by, update_time, remark from sys_dict_type
+    </sql>
+
+    <sql id="searchCondition">
+        <where>
+            <if test="dictName != null"> and dict_name like concat('%', ${symbol_pound}{dictName}, '%')</if>
+            <if test="dictType != null"> and dict_type = ${symbol_pound}{dictType}</if>
+            <if test="status != null"> and status = ${symbol_pound}{status}</if>
+        </where>
+    </sql>
+
+    <insert id="saveSysDictType"  useGeneratedKeys="true" keyProperty="dictId">
+        insert into sys_dict_type
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="dictName != null">dict_name,</if>
+            <if test="dictType != null">dict_type,</if>
+            <if test="status != null">status,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="remark != null">remark,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="dictName != null">${symbol_pound}{dictName},</if>
+            <if test="dictType != null">${symbol_pound}{dictType},</if>
+            <if test="status != null">${symbol_pound}{status},</if>
+            <if test="createBy != null">${symbol_pound}{createBy},</if>
+            <if test="createTime != null">${symbol_pound}{createTime},</if>
+            <if test="updateBy != null">${symbol_pound}{updateBy},</if>
+            <if test="updateTime != null">${symbol_pound}{updateTime},</if>
+            <if test="remark != null">${symbol_pound}{remark},</if>
+        </trim>
+    </insert>
+
+    <insert id="batchSaveSysDictType"  useGeneratedKeys="true" keyProperty="dictId">
+        <foreach collection="list" item="item" separator=";">
+            insert into sys_dict_type
+            <trim prefix="(" suffix=")" suffixOverrides=",">
+                <if test="dictName != null">dict_name,</if>
+                <if test="dictType != null">dict_type,</if>
+                <if test="status != null">status,</if>
+                <if test="createBy != null">create_by,</if>
+                <if test="createTime != null">create_time,</if>
+                <if test="updateBy != null">update_by,</if>
+                <if test="updateTime != null">update_time,</if>
+                <if test="remark != null">remark,</if>
+            </trim>
+            <trim prefix="values (" suffix=")" suffixOverrides=",">
+                <if test="item.dictName != null">${symbol_pound}{item.dictName},</if>
+                <if test="item.dictType != null">${symbol_pound}{item.dictType},</if>
+                <if test="item.status != null">${symbol_pound}{item.status},</if>
+                <if test="item.createBy != null">${symbol_pound}{item.createBy},</if>
+                <if test="item.createTime != null">${symbol_pound}{item.createTime},</if>
+                <if test="item.updateBy != null">${symbol_pound}{item.updateBy},</if>
+                <if test="item.updateTime != null">${symbol_pound}{item.updateTime},</if>
+                <if test="item.remark != null">${symbol_pound}{item.remark},</if>
+            </trim>
+        </foreach>
+    </insert>
+
+    <delete id="deleteSysDictTypeByDictId">
+        delete from sys_dict_type where dict_id = ${symbol_pound}{dictId}
+    </delete>
+
+    <delete id="deleteSysDictTypeByDictIds">
+        delete from sys_dict_type where dict_id in
+        <foreach item="dictId" collection="list" open="(" separator="," close=")">
+            ${symbol_pound}{dictId}
+        </foreach>
+    </delete>
+
+    <update id="modifySysDictType">
+        update sys_dict_type
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="dictName != null">dict_name = ${symbol_pound}{dictName},</if>
+            <if test="dictType != null">dict_type = ${symbol_pound}{dictType},</if>
+            <if test="status != null">status = ${symbol_pound}{status},</if>
+            <if test="createBy != null">create_by = ${symbol_pound}{createBy},</if>
+            <if test="createTime != null">create_time = ${symbol_pound}{createTime},</if>
+            <if test="updateBy != null">update_by = ${symbol_pound}{updateBy},</if>
+            <if test="updateTime != null">update_time = ${symbol_pound}{updateTime},</if>
+            <if test="remark != null">remark = ${symbol_pound}{remark},</if>
+        </trim>
+        where dict_id = ${symbol_pound}{dictId}
+    </update>
+
+    <update id="batchModifySysDictType">
+        <foreach collection="list" item="item" separator=";">
+            update sys_dict_type
+            <trim prefix="SET" suffixOverrides=",">
+                <if test="dictName != null">dict_name = ${symbol_pound}{item.dictName},</if>
+                <if test="dictType != null">dict_type = ${symbol_pound}{item.dictType},</if>
+                <if test="status != null">status = ${symbol_pound}{item.status},</if>
+                <if test="createBy != null">create_by = ${symbol_pound}{item.createBy},</if>
+                <if test="createTime != null">create_time = ${symbol_pound}{item.createTime},</if>
+                <if test="updateBy != null">update_by = ${symbol_pound}{item.updateBy},</if>
+                <if test="updateTime != null">update_time = ${symbol_pound}{item.updateTime},</if>
+                <if test="remark != null">remark = ${symbol_pound}{item.remark},</if>
+            </trim>
+            where dict_id = ${symbol_pound}{item.dictId}
+        </foreach>
+    </update>
+
+    <select id="searchSysDictTypeWithCondition" resultType="${package}.dao.entity.SysDictType">
+        <include refid="searchAllColumns"/>
+        <include refid="searchCondition"/>
+    </select>
+    
+    <select id="getSysDictTypeByDictId" resultType="${package}.dao.entity.SysDictType">
+        <include refid="searchAllColumns"/>
+        where dict_id = ${symbol_pound}{dictId}
+    </select>
+
+    <select id="searchSysDictTypeCount" resultType="integer">
+        select count(*) from sys_dict_type
+        <include refid="searchCondition"/>
+    </select>
+</mapper>

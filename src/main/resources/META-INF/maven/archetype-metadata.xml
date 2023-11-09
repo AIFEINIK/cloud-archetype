@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor xsi:schemaLocation="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0 http://maven.apache.org/xsd/archetype-descriptor-1.1.0.xsd" name="back-base-admin"
+    xmlns="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <fileSets>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>.idea/inspectionProfiles</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>.idea/mybatisx</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>.idea</directory>
+      <includes>
+        <include>**/*.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>front-admin/node_modules</directory>
+      <includes>
+        <include>**/*.txt</include>
+        <include>**/*.xml</include>
+        <include>**/*.html</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>front-admin/public</directory>
+      <includes>
+        <include>**/*.txt</include>
+        <include>**/*.html</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>front-admin/build</directory>
+      <includes>
+        <include>**/*.js</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>front-admin</directory>
+      <includes>
+        <include>**/*.development</include>
+        <include>**/*.production</include>
+        <include>**/*.gitignore</include>
+        <include>**/*.md</include>
+        <include>**/*.editorconfig</include>
+        <include>**/*.js</include>
+        <include>**/*.json</include>
+        <include>**/*.eslintignore</include>
+        <include>**/*.staging</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>front-admin/bin</directory>
+      <includes>
+        <include>**/*.bat</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>doc</directory>
+      <includes>
+        <include>**/*.sql</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>front-admin/src</directory>
+      <includes>
+        <include>**/*.jpg</include>
+        <include>**/*.gif</include>
+        <include>**/*.svg</include>
+        <include>**/*.scss</include>
+        <include>**/*.vue</include>
+        <include>**/*.png</include>
+        <include>**/*.js</include>
+        <include>**/*.json</include>
+        <include>**/*.yml</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>front-admin/node_modules</directory>
+      <includes>
+        <include>**/*.</include>
+        <include>**/*.css</include>
+        <include>**/*.styl</include>
+        <include>**/*.npmignore</include>
+        <include>**/*.swf</include>
+        <include>**/*.eslintcache</include>
+        <include>**/*.def</include>
+        <include>**/*.scss</include>
+        <include>**/*.vue</include>
+        <include>**/*.ls</include>
+        <include>**/*.APACHE2</include>
+        <include>**/*.conf</include>
+        <include>**/*.eot</include>
+        <include>**/*.bak</include>
+        <include>**/*.jscsrc</include>
+        <include>**/*.patch</include>
+        <include>**/*.BSD</include>
+        <include>**/*.exe</include>
+        <include>**/*.ico</include>
+        <include>**/*.opts</include>
+        <include>**/*.md</include>
+        <include>**/*.tm_properties</include>
+        <include>**/*.editorconfig</include>
+        <include>**/*.lock</include>
+        <include>**/*.pem</include>
+        <include>**/*.bnf</include>
+        <include>**/*.DOCS</include>
+        <include>**/*.sass</include>
+        <include>**/*.priv</include>
+        <include>**/*.nix</include>
+        <include>**/*.jshintrc</include>
+        <include>**/*.mk</include>
+        <include>**/*.flow</include>
+        <include>**/*.yaml</include>
+        <include>**/*.in</include>
+        <include>**/*.babelrc</include>
+        <include>**/*.el</include>
+        <include>**/*.eslintrc</include>
+        <include>**/*.png</include>
+        <include>**/*.less</include>
+        <include>**/*.mts</include>
+        <include>**/*.woff</include>
+        <include>**/*.1</include>
+        <include>**/*.node</include>
+        <include>**/*.gitkeep</include>
+        <include>**/*.name</include>
+        <include>**/*.MIT</include>
+        <include>**/*.gitmodules</include>
+        <include>**/*.eslintignore</include>
+        <include>**/*.closure-compiler</include>
+        <include>**/*.gyp</include>
+        <include>**/*.log</include>
+        <include>**/*.gif</include>
+        <include>**/*.Makefile</include>
+        <include>**/*.js</include>
+        <include>**/*.iml</include>
+        <include>**/*.gitattributes</include>
+        <include>**/*.jst</include>
+        <include>**/*.auto-changelog</include>
+        <include>**/*.jsx</include>
+        <include>**/*.rst</include>
+        <include>**/*.nvmrc</include>
+        <include>**/*.targ</include>
+        <include>**/*.sh</include>
+        <include>**/*.applescript</include>
+        <include>**/*.markdown</include>
+        <include>**/*.json</include>
+        <include>**/*.yml</include>
+        <include>**/*.disabled</include>
+        <include>**/*.cnf</include>
+        <include>**/*.gypi</include>
+        <include>**/*.map</include>
+        <include>**/*.key</include>
+        <include>**/*.cc</include>
+        <include>**/*.jpg</include>
+        <include>**/*.d</include>
+        <include>**/*.svg</include>
+        <include>**/*.ttf</include>
+        <include>**/*.h</include>
+        <include>**/*.env</include>
+        <include>**/*.toml</include>
+        <include>**/*.cjs</include>
+        <include>**/*.nycrc</include>
+        <include>**/*.o</include>
+        <include>**/*.ejs</include>
+        <include>**/*.jshintignore</include>
+        <include>**/*.tpl</include>
+        <include>**/*.gz</include>
+        <include>**/*.coffee</include>
+        <include>**/*.mjs</include>
+        <include>**/*.php</include>
+        <include>**/*.pub</include>
+        <include>**/*.ts</include>
+        <include>**/*.esprima</include>
+        <include>**/*.prettierignore</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>front-admin/public</directory>
+      <includes>
+        <include>**/*.png</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>LICENSE</include>
+        <include>README.md</include>
+        <include>.gitignore</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+  <modules>
+    <module id="${rootArtifactId}-common" dir="__rootArtifactId__-common" name="${rootArtifactId}-common">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}-dao" dir="__rootArtifactId__-dao" name="${rootArtifactId}-dao">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.xml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}-domain" dir="__rootArtifactId__-domain" name="${rootArtifactId}-domain">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}-interface" dir="__rootArtifactId__-interface" name="${rootArtifactId}-interface">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}-model" dir="__rootArtifactId__-model" name="${rootArtifactId}-model">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}-service" dir="__rootArtifactId__-service" name="${rootArtifactId}-service">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+    <module id="${rootArtifactId}-web" dir="__rootArtifactId__-web" name="${rootArtifactId}-web">
+      <fileSets>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+          <directory>src/main/java</directory>
+          <includes>
+            <include>**/*.java</include>
+          </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.xml</include>
+          </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+          <directory>src/main/resources</directory>
+          <includes>
+            <include>**/*.yml</include>
+          </includes>
+        </fileSet>
+      </fileSets>
+    </module>
+  </modules>
+</archetype-descriptor>
